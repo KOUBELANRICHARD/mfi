@@ -6,8 +6,15 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "filament/actions": "^3.2",
+        "filament/filament": "^3.2",
         "laravel/framework": "^11.0",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "parfaitementweb/filament-country-field": "^2.1",
+        "riskihajar/terbilang": "^2.0",
+        "rmunate/spell-number": "^1.0",
+        "spatie/laravel-pdf": "^1.5",
+        "ext-intl": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -34,7 +41,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
